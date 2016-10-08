@@ -56,7 +56,7 @@ footer.page-footer {
   background: rgba(40, 40, 40, 0.4); }
 
 body {
-  background: #ffffff url(../assets/img/pale_grey_slight_texture.jpg) top left repeat;
+  background: #ffffff url(/assets/img/pale_grey_slight_texture.jpg) top left repeat;
   color: #444;
   line-height: 1.6;
   font-size: 18px; }
