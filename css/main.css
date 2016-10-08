@@ -1,0 +1,155 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+nav ul a,
+nav .brand-logo {
+  color: white; }
+  nav ul a img,
+  nav .brand-logo img {
+    height: 64px; }
+
+nav {
+  background-color: #444; }
+  nav ul li {
+    list-style-type: none; }
+  nav i.right {
+    float: right;
+    margin-left: -5px; }
+
+.dropdown-content li > a, .dropdown-content li > span {
+  color: #444; }
+
+p {
+  line-height: 2rem; }
+
+.button-collapse {
+  color: #26a69a; }
+
+.parallax-container {
+  min-height: 480px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, 0.9); }
+
+.parallax-container .section {
+  width: 100%; }
+
+@media only screen and (max-width: 600px) {
+  #index-banner .section {
+    top: 0; } }
+.icon-block {
+  padding: 0 15px; }
+
+.icon-block .material-icons {
+  font-size: inherit; }
+
+footer.page-footer {
+  margin: 0;
+  background-color: #85BE42; }
+
+.bg-dark {
+  color: white;
+  background: rgba(40, 40, 40, 0.4); }
+
+body {
+  background: #ffffff url(../assets/img/pale_grey_slight_texture.jpg) top left repeat;
+  color: #444;
+  line-height: 1.6;
+  font-size: 18px; }
+
+ul li {
+  list-style-type: disc; }
+
+.bread {
+  padding-top: 48px;
+  margin: 48px; }
+  .bread p {
+    text-align: justify; }
+  .bread ul {
+    list-style-position: inside;
+    margin-left: 10px; }
+  .bread dl {
+    margin-left: 10px; }
+
+.blurb {
+  font-size: 24px; }
+  .blurb p {
+    text-align: justify; }
+
+img.flip {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH"; }
+
+.transition, .play, .card {
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  transition: .5s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.5, 1);
+  -moz-transition-timing-function: cubic-bezier(0.4, 0, 0.5, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.5, 1); }
+
+.card {
+  /*    width: 250px;*/
+  height: 350px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #85BE42;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  position: relative;
+  margin: 20px;
+  display: inline-block;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1); }
+
+.card:hover, .card.active {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+  -webkit-transform: scale(1.05) !important;
+  -moz-transform: scale(1.05) !important;
+  transform: scale(1.05) !important; }
+
+.nodec a {
+  font-weight: normal;
+  text-decoration: none;
+  color: #444; }
+
+nav .navlogo img {
+  height: 64px;
+  padding: 5px; }
+
+nav .navlogo:hover {
+  background-color: transparent; }
+
+.elixirorangebg {
+  background-color: #F47D20; }
+
+.elixirorangebg:hover {
+  background-color: #85BE42; }
+
+.topborder {
+  border-top-style: solid;
+  border-color: #444;
+  border-width: 2px; }
+
+.bottomborder {
+  border-bottom-style: solid;
+  border-color: #444;
+  border-width: 2px; }
+
+.button-collapse {
+  color: #85BE42; }
+
+.compact td {
+  padding: 5px; }
