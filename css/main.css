@@ -48,8 +48,14 @@ p {
   font-size: inherit; }
 
 footer.page-footer {
-  margin: 0;
-  background-color: #85BE42; }
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: #85BE42; 
+    height: 120px;
+}
+
 
 .bg-dark {
   color: white;
