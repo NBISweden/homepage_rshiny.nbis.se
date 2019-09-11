@@ -3,7 +3,11 @@ FROM rocker/shiny:3.6.1
 LABEL maintainer "Nanjiang Shu (nanjiang.shu@nbis.se)"
 LABEL version "1.0"
 
-RUN apt-get update
+RUN apt-get update && \
+    libxml2-dev  && \
+    libcurl4-openssl-dev && \
+    libssl-dev 
+
 
 # Download and install library
 
