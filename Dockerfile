@@ -4,10 +4,7 @@ LABEL maintainer "Nanjiang Shu (nanjiang.shu@nbis.se)"
 LABEL version "1.0"
 
 RUN apt-get update && \
-    libxml2-dev  && \
-    libcurl4-openssl-dev && \
-    libssl-dev 
-
+    apt-get install -y libxml2-dev  libcurl4-openssl-dev libssl-dev
 
 # Download and install library
 
