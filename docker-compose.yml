@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+    shinynbis:
+        image: nanjiang/shinynbis
+        container_name: shinynbis
+        volumes:
+            - /srv/shiny-server:/srv/shiny-server
+            - /srv/shinylog:/var/log/shiny-server
+        ports:
+            - "3838:80"
+        restart: always
+        stdin_open: true
+        tty: true
+
