@@ -6,8 +6,9 @@ services:
         volumes:
             - /srv/shiny-server:/srv/shiny-server
             - /srv/shinylog:/var/log/shiny-server
+            - /media/storage:/media/storage
         ports:
-            - "3838:80"
+            - "80:3838"
         restart: always
         stdin_open: true
         tty: true
