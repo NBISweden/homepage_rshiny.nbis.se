@@ -10,7 +10,7 @@ RUN apt-get update && \
 
 RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2','ggpubr', 'gplots', 'grid', 'gridExtra', 'metafor', 'readr', 'rmarkdown', 'stringr', 'readxl', 'rvest' ), dependencies = T)"
 
-
+COPY shiny-server.conf /etc/shiny-server/shiny-server.conf
 EXPOSE 3838
 
 CMD ["/usr/bin/shiny-server.sh"] 
