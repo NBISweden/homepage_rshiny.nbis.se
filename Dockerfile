@@ -4,7 +4,7 @@ LABEL maintainer "Nanjiang Shu (nanjiang.shu@nbis.se)"
 LABEL version "1.0"
 
 RUN apt-get update && \
-    apt-get install -y curl vim libxml2-dev  libcurl4-openssl-dev libssl-dev libudunits2-dev libgsl-dev libmariadbclient-dev libpq-dev libgeos-dev libgdal-dev
+    apt-get install -y procps curl vim libxml2-dev  libcurl4-openssl-dev libssl-dev libudunits2-dev libgsl-dev libmariadbclient-dev libpq-dev libgeos-dev libgdal-dev
 
 # Download and install library
 
