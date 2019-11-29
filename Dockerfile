@@ -8,7 +8,7 @@ RUN apt-get update && \
 
 # Download and install library
 
-RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2','ggpubr', 'gplots', 'grid', 'gridExtra', 'metafor', 'readr', 'rmarkdown', 'stringr', 'readxl', , 'shinythemes', 'rglwidget', 'rvest' ), dependencies = T)"
+RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2','ggpubr', 'gplots', 'grid', 'gridExtra', 'metafor', 'readr', 'rmarkdown', 'stringr', 'readxl',  'shinythemes', 'rglwidget', 'rvest' ), dependencies = T)"
 
 COPY shiny-server-conf/shiny-server.conf /etc/shiny-server/shiny-server.conf
 
