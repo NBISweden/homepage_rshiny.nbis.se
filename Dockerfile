@@ -2,7 +2,7 @@ FROM rocker/shiny:3.6.1
 LABEL maintainer="Nanjiang Shu (nanjiang.shu@nbis.se)"
 LABEL version="1.0"
 
-RUN apt-get update && rm -rf /var/lib/apt/lists/* && \
+RUN apt-get update && \
     apt-get install -y --no-install-recommends procps curl vim \
     libxml2-dev  libcurl4-openssl-dev libssl-dev libudunits2-dev libgsl-dev libmariadbclient-dev libpq-dev    libgeos-dev libgdal-dev \
     libfreetype6-dev libx11-dev mesa-common-dev libglu1-mesa-dev openbox freeglut3-dev
