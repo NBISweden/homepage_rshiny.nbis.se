@@ -4,9 +4,7 @@ services:
         image: nanjiang/shinynbis
         container_name: shinynbis
         volumes:
-            - /srv/shiny-server:/srv/shiny-server
-            - /srv/shinylog:/var/log/shiny-server
-            - /media/storage:/media/storage
+            - ${PATH_APPS}:/srv/shiny-server/shiny-server-apps
         ports:
             - "80:3838"
         restart: always
