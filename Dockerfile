@@ -18,6 +18,7 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
     R -e "install.packages(c('shinythemes', 'shinyBS', 'highcharter'), dependencies = T)" && \
     R -e "install.packages(c('colourpicker'), dependencies = T)" && \
     R -e "install.packages(c('rJava'), dependencies = T)" && \
+    R -e "install.packages(c('xlsx'), dependencies = T)" && \
 #nametagger
     R -e "install.packages(c('shinyAce', 'png', 'showtext'), dependencies = T)" && \
 # zage
