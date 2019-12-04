@@ -7,14 +7,14 @@ The NBIS rshiny server can be accessed at http://rshiny.nbis.se
 
 1. Download apps by the script [getapp.sh](src/getapp.sh) by running
 
-    src/getapp.sh <path-of-your-apps>
+        src/getapp.sh <path-of-your-apps>
 
 2. Define the ENV `PATH_APPS` for docker-compose by the following command
 
-    echo "PATH_APPS=<path-of-your-apps>
+        echo "PATH_APPS=<path-of-your-apps>" > .env
 
 3. Deploy the web-server container using
 
-    docker-compose up -d
+        docker-compose up -d
 
 
