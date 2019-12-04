@@ -28,6 +28,9 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
     R -e "BiocManager::install('Cairo')" && \
     R -e "BiocManager::install('formattable')"
 
+WORKDIR /srv
+ADD . /srv/shiny-server/
+RUN mkdir -p /srv/shiny-server/shiny-server-apps
 COPY shiny-server-conf/shiny-server.conf /etc/shiny-server/
 
 
