@@ -15,7 +15,7 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
 #igraph
     R -e "install.packages(c('plotrix', 'rgl', 'rglwidget'), dependencies = T)" && \
 #pophelperShiny
-    R -e "install.packages(c('shinythemes', shinyBS', 'highcharter'), dependencies = T)" && \
+    R -e "install.packages(c('shinythemes', 'shinyBS', 'highcharter'), dependencies = T)" && \
 #nametagger
     R -e "install.packages(c('shinyAce', 'png', 'showtext'), dependencies = T)" && \
 # zage
