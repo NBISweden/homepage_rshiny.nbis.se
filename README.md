@@ -13,8 +13,24 @@ The NBIS rshiny server can be accessed at http://rshiny.nbis.se
 
         echo "PATH_APPS=<path-of-your-apps>" > .env
 
-3. Deploy the web-server container using
+3. Set the ports for the HOST and CONTAINER
+
+        echo -e "PORT_HOST=13838\nPORT_CONTAINER=13838" >> .env
+
+4. Deploy the web-server container using
 
         docker-compose up -d
 
+
+After success deployment, you should be able to access the server at
+http://localhost:3838
+
+or if you add the line
+
+```
+127.0.0.1 rshiny.nbis.se
+```
+
+to the host file `/etc/hosts`, the server can also be accessed at
+http://rshiny.nbis.se:3838
 
