@@ -27,7 +27,6 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
     R -e "BiocManager::install('RNASeqPower')" && \
     R -e "BiocManager::install('Cairo')" && \
     R -e "BiocManager::install('formattable')" && \
-
 # singleCell
     R -e "install.packages(c('flexdashboard', 'Seurat', 'tidyverse', 'cowplot'), dependencies = T)"
 
