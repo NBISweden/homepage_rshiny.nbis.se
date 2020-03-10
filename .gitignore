@@ -9,3 +9,8 @@
 bak/
 tmp/
 log/
+
+dir1
+.env
+nbis.se/
+shiny-server-apps
