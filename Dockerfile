@@ -29,7 +29,9 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
     R -e "BiocManager::install('formattable')" && \
 # singleCell
     R -e "install.packages(c('flexdashboard', 'tidyverse', 'cowplot'), dependencies = T)" && \
-    R -e "BiocManager::install('Seurat')"
+    R -e "BiocManager::install('Seurat')" && \
+# new rshiny-support-4884
+    R -e "install.packages(c('randomcoloR', 'dbscan', 'shadowtext', 'GGally', 'ggrepel', 'ggforce', 'ggpubr'), dependencies = T)"
 
 WORKDIR /srv
 ADD . /srv/shiny-server/
