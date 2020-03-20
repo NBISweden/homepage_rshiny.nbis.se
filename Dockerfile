@@ -5,7 +5,7 @@ LABEL version="1.0"
 RUN apt-get update && \
     apt-get install -y --no-install-recommends procps curl vim \
     openjdk-8-jdk libbz2-dev libxml2-dev  libcurl4-openssl-dev libssl-dev libudunits2-dev libgsl-dev libmariadbclient-dev libpq-dev    libgeos-dev libgdal-dev \
-    libfreetype6-dev libx11-dev mesa-common-dev libglu1-mesa-dev openbox freeglut3-dev
+    libfreetype6-dev libx11-dev mesa-common-dev libglu1-mesa-dev openbox freeglut3-dev libv8-dev
 
 # Download and install library
 
