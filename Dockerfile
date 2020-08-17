@@ -10,7 +10,7 @@ RUN apt-get update && \
 # Download and install library
 
 #MetaMeX
-RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2','ggpubr', 'gplots', 'grid',   'gridExtra', 'metafor', 'readr', 'rmarkdown', 'stringr', 'readxl'), dependencies = T)" && \
+RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2','ggpubr', 'gplots', 'grid',   'gridExtra', 'metafor', 'readr', 'rmarkdown', 'stringr', 'readxl', 'shinyjs', 'scales'), dependencies = T)" && \
     R -e "install.packages(c('rvest'), dependencies = T)" && \
 #igraph
     R -e "install.packages(c('plotrix', 'rgl', 'rglwidget'), dependencies = T)" && \
