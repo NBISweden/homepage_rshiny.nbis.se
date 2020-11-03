@@ -1,6 +1,6 @@
 FROM rocker/shiny:3.6.1
 LABEL maintainer="Nanjiang Shu (nanjiang.shu@nbis.se)"
-LABEL version="1.0"
+LABEL version="1.1"
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends procps curl vim \
@@ -30,8 +30,10 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
 # singleCell
     R -e "install.packages(c('flexdashboard', 'tidyverse', 'cowplot'), dependencies = T)" && \
     R -e "BiocManager::install('Seurat')" && \
-# new rshiny-support-4884
-    R -e "install.packages(c('randomcoloR', 'dbscan', 'shadowtext', 'GGally', 'ggrepel', 'ggforce', 'ggpubr'), dependencies = T)"
+# rshiny-support-4884
+    R -e "install.packages(c('randomcoloR', 'dbscan', 'shadowtext', 'GGally', 'ggrepel', 'ggforce', 'ggpubr'))"
+# shiny-certificate
+    R -e "install.packages(c('ggtext','showtext'))"
 
 WORKDIR /srv
 ADD . /srv/shiny-server/
