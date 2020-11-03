@@ -1,7 +1,15 @@
 [<img align="center" src="icons/NBIS.png" width="200" height="100"
 />](http://rshiny.nbis.se) 
+
 ## Homepage for the NBIS rshiny server
+
 The NBIS rshiny server can be accessed at http://rshiny.nbis.se
+
+## Adding a new app
+
+1. Fork this [github repo](https://github.com/NBISweden/homepage_rshiny.nbis.se), update the Dockfile to include dependencies (linux and R pacakges) and send a pull request.
+2. On the server, go to `/media/storage/server/homepage_rshiny.nbis.se/shiny-server-apps` and run `git clone app-url` to clone the app and place it inside a directory, say `awesome-app`.
+3. The app should now be available through `http://rshiny.nbis.se/shiny-server-apps/awesome-app/`.
 
 ## Deploying NBIS rshiny web-server by Docker
 
