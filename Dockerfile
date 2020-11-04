@@ -33,7 +33,8 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
 # rshiny-support-4884
     R -e "install.packages(c('randomcoloR', 'dbscan', 'shadowtext', 'GGally', 'ggrepel', 'ggforce', 'ggpubr'), dependencies = T)" && \
 # shiny-certificate
-    R -e "install.packages(c('ggtext','showtext'))"
+    R -e "install.packages(c('showtext'))" && \
+    R -e "BiocManager::install('ggtext')"
 
 WORKDIR /srv
 ADD . /srv/shiny-server/
