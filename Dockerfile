@@ -5,7 +5,7 @@ LABEL version="1.1"
 RUN apt-get update && \
     apt-get install -y --no-install-recommends procps curl vim \
     openjdk-8-jdk libbz2-dev libxml2-dev  libcurl4-openssl-dev libssl-dev libudunits2-dev libgsl-dev libmariadbclient-dev libpq-dev    libgeos-dev libgdal-dev \
-    libfreetype6-dev libx11-dev mesa-common-dev libglu1-mesa-dev openbox freeglut3-dev libv8-dev
+    libfreetype6-dev libx11-dev mesa-common-dev libglu1-mesa-dev openbox freeglut3-dev libv8-dev libmagick++-dev
 
 # Download and install library
 
@@ -33,7 +33,7 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
 # rshiny-support-4884
     R -e "install.packages(c('randomcoloR', 'dbscan', 'shadowtext', 'GGally', 'ggrepel', 'ggforce', 'ggpubr'), dependencies = T)" && \
 # shiny-certificate
-    R -e "install.packages(c('showtext'))" && \
+    R -e "install.packages(c('showtext','magick'))" && \
     R -e "BiocManager::install('ggtext')"  && \
 # o_andersson
     R -e "install.packages(c('RColorBrewer'))"
