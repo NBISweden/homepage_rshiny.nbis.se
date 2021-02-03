@@ -43,18 +43,10 @@ The NBIS rshiny server can be accessed at http://rshiny.nbis.se
 
 4. Deploy the web-server container using
 
-        docker-compose up -d
+        docker-compose -f docker-compose-local.yml up -d
 
 
 After success deployment, you should be able to access the server at
-http://localhost:3838
+http://localhost:13838
 
-or if you add the line
-
-```
-127.0.0.1 rshiny.nbis.se
-```
-
-to the host file `/etc/hosts`, the server can also be accessed at
-http://rshiny.nbis.se:3838
 
