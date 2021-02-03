@@ -11,10 +11,10 @@ The NBIS rshiny server can be accessed at http://rshiny.nbis.se
 
    1.1 Update the Dockfile to include dependencies (linux and R packages)
    
-   1.2 Add link entry in **index.html** like  
+   1.2 Add link entry in **web/index.html** like  
    `<li><a href="/shiny-server-apps/awesome-app">Awesome App</a></li>`
    
-   1.3 Add link entry in **apps/index.html**
+   1.3 Add link entry in **web/apps/index.html**
    ```
         <li><a href="/shiny-server-apps/awesome-app">Awesome App</a>
         (Awesome App)
