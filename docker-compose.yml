@@ -5,7 +5,6 @@ services:
         container_name: shinynbis
         volumes:
             - ${PATH_APPS}:/srv/shiny-server/shiny-server-apps
-            - /srv/shinylog:/var/log/shiny-server
         ports:
             - "${PORT_HOST:-80}:${PORT_CONTAINER:-3838}"
         restart: always
