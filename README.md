@@ -53,14 +53,14 @@ http://localhost
 ## Deploying NBIS rshiny web-server by Docker on the production server
 
 Perform steps 1-3 the same as depolying locally and then depoly the web-server
-container with the command 
+with the command 
 
     docker-compose up -d
 
 Note that every time when you run `docker-compose down` and `docker-compose
 up`, the microservice `letsencrypt-nginx-proxy-companion` will try to obtain
 a new token from letsencrypt. To ensure the certificate retrieval will not
-exceeds the (rate limits)[https://letsencrypt.org/docs/rate-limits/] set by
+exceeds the [rate limits](https://letsencrypt.org/docs/rate-limits/) set by
 LetsEncrypt. It is recommended to restart shiny services by the following
 command if there are any updates
 
