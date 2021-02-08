@@ -3,6 +3,9 @@ version: "2"
 services:
 
 ######################### SETUP OF PROXY AND SSL ###############################
+# The following set up is taken from encrypted_dashboard developed by
+# mikkelkrogsholm and lstmemery
+# Gitrepo: https://github.com/mikkelkrogsholm/encrypted_dashboard
 
 # Don't edit this service
   nginx:
