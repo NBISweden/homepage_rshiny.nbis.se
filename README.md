@@ -1,9 +1,9 @@
 [<img align="center" src="web/icons/NBIS.png" width="200" height="100"
-/>](https://rshiny.nbis.se) 
+/>](https://nbis.se) 
 
 ## Homepage for the NBIS rshiny server
 
-The NBIS rshiny server can be accessed at http://rshiny.nbis.se
+The NBIS rshiny server can be accessed at https://rshiny.nbis.se
 
 ## Adding a new app
 
