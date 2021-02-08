@@ -85,7 +85,7 @@ services:
         - LETSENCRYPT_HOST=www.metamex.eu # change line
         - LETSENCRYPT_EMAIL=nanjiang.shu@nbis.se # change line
       volumes:
-        - ${PATH_APPS}:/srv/shiny-server/shiny-server-apps
+        - ${PATH_APPS_METAMEX}:/srv/shiny-server/MetaMEx
         - ./shiny-server-conf/shiny-server-metamex.conf:/etc/shiny-server/shiny-server.conf
         - ./volumes/shiny/logs:/var/log/
 
