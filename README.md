@@ -59,7 +59,7 @@ with the command
 
 Note that every time when you run `docker-compose down` and `docker-compose
 up`, the microservice `letsencrypt-nginx-proxy-companion` will try to obtain
-a new token from letsencrypt. To ensure the certificate retrieval will not
+a new token from LetsEncrypt. To ensure the certificate retrieval will not
 exceeds the [rate limits](https://letsencrypt.org/docs/rate-limits/) set by
 LetsEncrypt. It is recommended to restart shiny services by the following
 command if there are any updates
