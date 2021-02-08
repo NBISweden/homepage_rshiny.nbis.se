@@ -39,13 +39,10 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
     R -e "install.packages(c('RColorBrewer'))"
 
 
-WORKDIR /srv
 ADD web /srv/shiny-server/
 RUN mkdir -p /srv/shiny-server/shiny-server-apps
-COPY shiny-server-conf/shiny-server.conf /etc/shiny-server/
 
 
 EXPOSE 3838
-EXPOSE 13838
 
 CMD ["/usr/bin/shiny-server.sh"]

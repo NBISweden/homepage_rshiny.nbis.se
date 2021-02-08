@@ -27,7 +27,7 @@ The NBIS rshiny server can be accessed at http://rshiny.nbis.se
 2. On the server, go to `/media/storage/server/homepage_rshiny.nbis.se/shiny-server-apps` and run `git clone app-url` to clone the app and place it inside a directory, say `awesome-app`.
 3. The app should now be available through `http://rshiny.nbis.se/shiny-server-apps/awesome-app/`.
 
-## Deploying NBIS rshiny web-server by Docker
+## Deploying NBIS rshiny web-server by Docker locally
 
 1. Download apps by the script [getapp.sh](src/getapp.sh) by running
 
@@ -37,16 +37,12 @@ The NBIS rshiny server can be accessed at http://rshiny.nbis.se
 
         echo "PATH_APPS=<path-of-your-apps>" > .env
 
-3. Set the ports for the HOST and CONTAINER
-
-        echo -e "PORT_HOST=13838\nPORT_CONTAINER=13838" >> .env
-
-4. Deploy the web-server container using
+3. Deploy the web-server container using
 
         docker-compose -f docker-compose-local.yml up -d
 
 
 After success deployment, you should be able to access the server at
-http://localhost:13838
+http://localhost
 
 
