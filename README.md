@@ -1,4 +1,4 @@
-[<img align="center" src="icons/NBIS.png" width="200" height="100"
+[<img align="center" src="web/icons/NBIS.png" width="200" height="100"
 />](https://rshiny.nbis.se) 
 
 ## Homepage for the NBIS rshiny server
