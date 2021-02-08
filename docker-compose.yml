@@ -58,14 +58,14 @@ services:
       expose:
         - "3838"
       environment:
-        - VIRTUAL_HOST=nginx1.bioshu.se # change line
+        - VIRTUAL_HOST=rshiny.nbis.se # change line
         - VIRTUAL_NETWORK=nginx-proxy # change line
         - VIRTUAL_PORT=80
-        - LETSENCRYPT_HOST=nginx1.bioshu.se # change line
-        - LETSENCRYPT_EMAIL=t0001@bioshu.se # change line
+        - LETSENCRYPT_HOST=rshiny.nbis.se # change line
+        - LETSENCRYPT_EMAIL=nanjiang.shu@nbis.se # change line
       volumes:
         - ./web:/srv/shiny-server
-        - ./shinyapps:/srv/shiny-server/shiny-server-apps
+        - ${PATH_APPS}:/srv/shiny-server/shiny-server-apps
         - ./shiny-server-conf/shiny-server-main.conf:/etc/shiny-server/shiny-server.conf
         - ./volumes/shiny/logs:/var/log/
 
@@ -76,16 +76,15 @@ services:
       expose:
         - "3838"
       environment:
-        - VIRTUAL_HOST=nginx2.bioshu.se # change line
+        - VIRTUAL_HOST=www.metamex.eu # change line
         - VIRTUAL_NETWORK=nginx-proxy # change line
         - VIRTUAL_PORT=80
-        - LETSENCRYPT_HOST=nginx2.bioshu.se # change line
-        - LETSENCRYPT_EMAIL=t0001@bioshu.se # change line
+        - LETSENCRYPT_HOST=www.metamex.eu # change line
+        - LETSENCRYPT_EMAIL=nanjiang.shu@nbis.se # change line
       volumes:
-        - ./shinyapps:/srv/shiny-server/shiny-server-apps
+        - ${PATH_APPS}:/srv/shiny-server/shiny-server-apps
         - ./shiny-server-conf/shiny-server-metamex.conf:/etc/shiny-server/shiny-server.conf
         - ./volumes/shiny/logs:/var/log/
-
 
 # Watchtower is a process for watching your Docker containers and automatically
 # updating and restarting them whenever their base image is refreshed.
