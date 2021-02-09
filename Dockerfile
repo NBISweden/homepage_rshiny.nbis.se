@@ -19,6 +19,8 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
     R -e "install.packages(c('colourpicker'), dependencies = T)" && \
     R -e "install.packages(c('rJava'), dependencies = T)" && \
     R -e "install.packages(c('xlsx'), dependencies = T)" && \
+    R -e "install.packages(c('label.switching','tidyr','remotes','DT','htmlwidgets','magrittr','markdown','shiny','viridisLite','writexl'),repos = 'http://cran.us.r-project.org', dependencies= T)" && \
+    R -e "remotes::install_github('royfrancis/pophelper')" && \
 #nametagger
     R -e "install.packages(c('shinyAce', 'png', 'showtext'), dependencies = T)" && \
 # zage
