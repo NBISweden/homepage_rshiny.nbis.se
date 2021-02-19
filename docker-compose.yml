@@ -89,6 +89,23 @@ services:
         - ./shiny-server-conf/shiny-server-metamex.conf:/etc/shiny-server/shiny-server.conf
         - ./volumes/shiny/logs:/var/log/
 
+  shinynhp:
+      restart: always
+      image: nanjiang/shinynbis 
+      container_name: shinynhp
+      expose:
+        - "3838"
+      environment:
+        - VIRTUAL_HOST=www.nhp-embryo.net # change line
+        - VIRTUAL_NETWORK=nginx-proxy # change line
+        - VIRTUAL_PORT=80
+        - LETSENCRYPT_HOST=www.nhp-embryo.net # change line
+        - LETSENCRYPT_EMAIL=nanjiang.shu@nbis.se # change line
+      volumes:
+        - ${PATH_APPS_NHP}:/srv/shiny-server/nhp_shiny
+        - ./shiny-server-conf/shiny-server-nhp.conf:/etc/shiny-server/shiny-server.conf
+        - ./volumes/shiny/logs:/var/log/
+
 # Watchtower is a process for watching your Docker containers and automatically
 # updating and restarting them whenever their base image is refreshed.
   watchtower:
