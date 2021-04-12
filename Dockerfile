@@ -68,6 +68,8 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
     R -e "BiocManager::install('ggtext')"  && \
 # o_andersson
     R -e "install.packages(c('RColorBrewer'), dependencies = T)"
+# natural-nations
+    R -e "install.packages(c('plyr', 'shiny.i18n', 'shinydashboard', 'shinyTime', 'shinyWidgets', 'leaflet', 'plotly', 'wesanderson'), dependencies = T)" && \
 
 ADD web /srv/shiny-server/
 RUN mkdir -p /srv/shiny-server/shiny-server-apps
