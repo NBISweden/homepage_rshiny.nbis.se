@@ -26,7 +26,7 @@ The NBIS rshiny server can be accessed at https://rshiny.nbis.se
         </li>
    ```
 
-   2.5. Send a pull request.
+   2.5. Send a pull request. For example, see [here](https://github.com/NBISweden/homepage_rshiny.nbis.se/commit/40fb51b079f763a13aeb367068e661f1f45ea948).
    
 3. On the server
 
