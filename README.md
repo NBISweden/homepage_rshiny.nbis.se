@@ -1,20 +1,24 @@
 [<img align="center" src="web/icons/NBIS.png" width="200" height="100"
 />](https://nbis.se) 
 
-## Homepage for the NBIS rshiny server
+# Homepage for the NBIS rshiny server
 
 The NBIS rshiny server can be accessed at https://rshiny.nbis.se
 
 ## Adding a new app
 
-1. Fork this [github repo](https://github.com/NBISweden/homepage_rshiny.nbis.se)
+1. Make sure your app is a git repo on a git repository (GitHub, GitLab etc.). The directory should contain minimum `app.R` or `ui.R/server.R` files. Other dependencies if needed must be in this directory.
 
-   1.1. Update the Dockfile to include dependencies (linux and R packages)
+2. On GitHub
 
-   1.2. Add link entry in **web/index.html** like  
+   2.1 Fork this [github repo](https://github.com/NBISweden/homepage_rshiny.nbis.se) and update the files described below.
+
+   2.2. Update the Dockerfile to include dependencies (linux and R packages) if it doesn't already exist.
+
+   2.3. Add link entry in **web/index.html**, for example:  
    `<li><a href="/shiny-server-apps/awesome-app">Awesome App</a></li>`
 
-   1.3. Add link entry in **web/apps/index.html**
+   2.4. Add link entry in **web/apps/index.html**, for example:  
    ```
         <li><a href="/shiny-server-apps/awesome-app">Awesome App</a>
         (Awesome App)
@@ -22,10 +26,15 @@ The NBIS rshiny server can be accessed at https://rshiny.nbis.se
         </li>
    ```
 
-   1.4. Send a pull request.
+   2.5. Send a pull request.
    
-2. On the server, go to `/media/storage/server/homepage_rshiny.nbis.se/shiny-server-apps` and run `git clone app-url` to clone the app and place it inside a directory, say `awesome-app`.
-3. The app should now be available through `http://rshiny.nbis.se/shiny-server-apps/awesome-app/`.
+3. On the server
+
+   3.1 For access to server, contact [nanjiangshu](https://github.com/nanjiangshu).
+ 
+   3.2 Go to `/media/storage/server/homepage_rshiny.nbis.se/shiny-server-apps` and run `git clone app-url` to clone the app. `app-url` is the URL location from step 1. The directory will be the same name as the repo you are cloning from. To use a different directory name, run for example: `git clone app-url awesome-app`.
+ 
+4. The app should now be available through `http://rshiny.nbis.se/shiny-server-apps/awesome-app/`. You might have to wait a few minutes for the change.
 
 ## Deploying NBIS rshiny web-server by Docker locally
 
