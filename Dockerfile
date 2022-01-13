@@ -37,26 +37,20 @@ RUN apt-get update -y && \
 
 # Download and install library
 
-#MetaMeX
+# MetaMeX
 RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2','ggpubr', 'gplots', 'grid',   'gridExtra', 'metafor', 'readr', 'rmarkdown', 'stringr', 'readxl', 'shinyjs', 'scales'), dependencies = T)" && \
     R -e "install.packages(c('rvest'), dependencies = T)" && \
-#igraph
+# igraph
     R -e "install.packages(c('plotrix', 'rgl', 'rglwidget'), dependencies = T)" && \
-#pophelperShiny
+# pophelperShiny
     R -e "install.packages(c('shinythemes', 'shinyBS', 'highcharter'), dependencies = T)" && \
     R -e "install.packages(c('colourpicker'), dependencies = T)" && \
     R -e "install.packages(c('rJava'), dependencies = T)" && \
     R -e "install.packages(c('xlsx'), dependencies = T)" && \
     R -e "install.packages(c('label.switching','tidyr','remotes','DT','htmlwidgets','magrittr','markdown','shiny','viridisLite','writexl'),repos = 'http://cran.us.r-project.org', dependencies= T)" && \
     R -e "remotes::install_github('royfrancis/pophelper')" && \
-#nametagger
+# shiny-nametagger
     R -e "install.packages(c('shinyAce', 'png', 'showtext'), dependencies = T)" && \
-# zage
-    R -e "install.packages(c('shinyWidgets'), dependencies = T)" && \
-    R -e "install.packages(c('BiocManager'), dependencies = T)" && \
-    R -e "BiocManager::install('RNASeqPower')" && \
-    R -e "BiocManager::install('Cairo')" && \
-    R -e "BiocManager::install('formattable')" && \
 # singleCell
     R -e "install.packages(c('flexdashboard', 'tidyverse', 'cowplot'), dependencies = T)" && \
     R -e "setRepositories(ind = 1:2)" && \
@@ -64,12 +58,15 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
 # rshiny-support-4884
     R -e "install.packages(c('randomcoloR', 'dbscan', 'shadowtext', 'GGally', 'ggrepel', 'ggforce', 'ggpubr'), dependencies = T)" && \
 # shiny-certificate
-    R -e "install.packages(c('showtext','magick'), dependencies = T)" && \
-    R -e "BiocManager::install('ggtext')"  && \
+    R -e "install.packages(c('showtext','magick','ggtext'), dependencies = T)" && \
 # o_andersson
     R -e "install.packages(c('RColorBrewer'), dependencies = T)" && \
 # natural-nations
-    R -e "install.packages(c('plyr', 'shiny.i18n', 'shinydashboard', 'shinyTime', 'shinyWidgets', 'leaflet', 'plotly', 'wesanderson', 'shinydashboard', 'shinyjs', 'extrafont'), dependencies = T)"
+    R -e "install.packages(c('plyr', 'shiny.i18n', 'shinydashboard', 'shinyTime', 'shinyWidgets', 'leaflet', 'plotly', 'wesanderson', 'shinydashboard', 'shinyjs', 'extrafont'), dependencies = T)" && \
+# shiny-rnaseq-power
+    R -e "install.packages(c('shinyBS','shinythemes','RNASeqPower'), dependencies = T)" && \
+# support-5860
+    R -e "install.packages(c('shinythemes','DT','readxl'), dependencies = T)"
 
 ADD web /srv/shiny-server/
 RUN mkdir -p /srv/shiny-server/shiny-server-apps
