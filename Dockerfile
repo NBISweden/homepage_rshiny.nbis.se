@@ -66,7 +66,7 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
 # shiny-rnaseq-power
     R -e "install.packages(c('shinyBS','shinythemes','RNASeqPower'), dependencies = T)" && \
 # support-5860
-    R -e "install.packages(c('shinythemes','DT','readxl'), dependencies = T)"
+    R -e "install.packages(c('shinythemes','DT','readxl','data.table','shinyhelper','Matrix'), dependencies = T)"
 
 ADD web /srv/shiny-server/
 RUN mkdir -p /srv/shiny-server/shiny-server-apps
