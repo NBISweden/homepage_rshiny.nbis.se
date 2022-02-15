@@ -52,7 +52,7 @@ RUN R -e "install.packages(c('DT', 'dplyr', 'forestplot', 'ggfortify','ggplot2',
 # shiny-nametagger
     R -e "install.packages(c('shinyAce', 'png', 'showtext'), dependencies = T)" && \
 # singleCell
-    R -e "install.packages(c('flexdashboard', 'tidyverse', 'cowplot'), dependencies = T)" && \
+    R -e "install.packages(c('flexdashboard', 'tidyverse', 'cowplot', 'shinymanager'), dependencies = T)" && \
     R -e "setRepositories(ind = 1:2)" && \
     R -e "install.packages(c('Seurat'))" && \
 # rshiny-support-4884
