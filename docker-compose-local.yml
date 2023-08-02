@@ -1,7 +1,7 @@
 version: '3.0'
 services:
     shinynbis:
-        image: nanjiang/shinynbis
+        image: ghcr.io/nbisweden/shinynbis:latest
         container_name: shinynbis
         volumes:
             - ./web:/srv/shiny-server

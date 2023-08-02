@@ -56,7 +56,7 @@ services:
 # Spin up a Shiny docker
   shinymain:
       restart: always
-      image: nanjiang/shinynbis 
+      image: ghcr.io/nbisweden/shinynbis:latest
       container_name: shinymain
       expose:
         - "3838"
